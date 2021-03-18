@@ -1,0 +1,50 @@
+<div class="m-3 d-flex flex-column align-items-center">
+
+    <h2>Loan Request Form</h2>
+    <form class="mb-4" [formGroup]="loanRequestForm">
+        <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input formControlName="fullName" type="text" class="form-control" id="fullName">
+        </div>
+        <div class="mb-3">
+            <label for="nameWithInitial" class="form-label">Name With Initial</label>
+            <input formControlName="nameWithInitial" type="text" class="form-control" id="nameWithInitial">
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input formControlName="age" type="number" class="form-control" id="age">
+        </div>
+        <div class="mb-3">
+            <label for="nic" class="form-label">NIC</label>
+            <input formControlName="nic" type="text" class="form-control" id="nic">
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Permanent Address</label>
+            <input formControlName="address" type="text" class="form-control" id="address">
+        </div>
+    </form>
+    
+    <h2>Loan Information</h2>
+    <form [formGroup]="loanInformationForm">
+        <div class="mb-3">
+            <label for="amount" class="form-label">Amount</label>
+            <input formControlName="amount" type="number" class="form-control" id="amount">
+        </div>
+        <div class="mb-3">
+            <label for="interestRate" class="form-label">Interest Rate</label>
+            <input formControlName="interestRate" type="number" class="form-control" id="interestRate">
+        </div>
+        <div class="mb-3">
+            <label for="loanTerm" class="form-label">Loan Term (In Months)</label>
+            <input formControlName="loanTerm" type="number" class="form-control" id="loanTerm">
+        </div>
+        
+        <div class="mb-3">
+            <label for="installment" class="form-label">Installment</label>
+            <input formControlName="installment" type="number" class="form-control" id="installment">
+        </div>
+    </form>
+    <div>
+        <button type="button" class="btn btn-primary" (click)="submitForm()">Submit</button>
+    </div>
+</div>

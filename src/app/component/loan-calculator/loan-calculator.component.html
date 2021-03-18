@@ -1,0 +1,29 @@
+
+<div class="m-3 d-flex flex-column align-items-center">
+    
+    <h2>Loan Calculator</h2>
+    <form [formGroup]="loanInformationForm">
+        <div class="mb-3">
+            <label for="amount" class="form-label">Capital</label>
+            <input   formControlName="amount"  type='number' class="form-control" id="amount">
+        </div>
+        <div class="mb-3">
+            <label for="interestRate" class="form-label">Interest Rate</label>
+            <input formControlName="interestRate"  type='number' class="form-control" id="interestRate">
+        </div>
+        <div class="mb-3">
+            <label for="loanTerm" class="form-label">Loan Term</label>
+            <input formControlName="loanTerm"  type='number' class="form-control" id="loanTerm">
+        </div>
+    </form>
+    <div>
+        <button type="button" class="btn btn-primary" (click)="submitForm()">Calculate</button>
+    </div>
+    <div class="mt-5">
+    <ng-container>
+            <h3 #lblName id="lblName">
+    
+            </h3>
+    </ng-container>
+    </div>
+</div>

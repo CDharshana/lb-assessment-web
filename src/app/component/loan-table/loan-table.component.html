@@ -1,0 +1,80 @@
+<div>
+    <h2 class="mt-3">Customer Loan Requests</h2>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">NIC</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Loan Term</th>
+                    <th scope="col">Installment</th>
+                    <!-- <th scope="col">Request ID</th> -->
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let loan of loanData">
+                    
+                    <td>{{loan.nameWithInitial}}</td>
+                    <td>{{loan.nic}}</td>
+                    <td>{{loan.amount}}</td>
+                    <td>{{loan.loanTerm}}</td>
+                    <td>{{loan.installment}}</td>
+                    <!-- <th scope="row">{{loan.id}}</th> -->
+                    <td>
+                        <button type="button" class="btn btn-primary" (click)="viewLoan(loan)">View</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h2 class="text-center">Loan Details</h2>
+        <div class="loan-table d-flex justify-content-center">
+            <table class="table">
+                <tbody>
+                    
+                    <tr>
+                        <th scope="row" class="text-end">FullName :</th>
+                        <td>{{selectedLoan?.fullName}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-end">Name with Initials :</th>
+                        <td>{{selectedLoan?.nameWithInitial}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-end">Age:</th>
+                        <td>{{selectedLoan?.age}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-end">NIC :</th>
+                        <td>{{selectedLoan?.nic}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-end">Address :</th>
+                        <td>{{selectedLoan?.address}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-end">Amount :</th>
+                        <td>{{selectedLoan?.amount}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-end">Interest Rate :</th>
+                        <td>{{selectedLoan?.interestRate}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-end">Loan Term :</th>
+                        <td>{{selectedLoan?.loanTerm}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-end">Installment :</th>
+                        <td>{{selectedLoan?.installment}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
